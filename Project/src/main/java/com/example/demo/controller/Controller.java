@@ -13,13 +13,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+//import com.example.demo.model.Ex7_model;
+//import com.example.demo.model.Ex6_model;
 import com.example.demo.model.Pro_model;
 import com.example.demo.service.Pro_Service;
 
 @RestController
 public class Controller {
 	@Autowired
-		Pro_Service sser;
+		Pro_Service sser;  //json to java object
 		@PostMapping("/post")
 		public List<Pro_model> add(@RequestBody  List<Pro_model> ss) {
 			return sser.saveinfo(ss);
@@ -48,4 +50,53 @@ public class Controller {
 		public void deleteparm(@RequestParam Long mobileno) {
 			sser.deleteparm(mobileno);
 		}
+		@GetMapping("sort/{name}")
+		public List<Pro_model>sort(@PathVariable String name){
+			return sser.sortinfo(name);
+		}
+		@GetMapping("sortdesc/{name}")
+		public List<Pro_model>sortdesc(@PathVariable String name){
+			return sser.sortdescinfo(name);
+		}
+		@GetMapping("sortandpage/{pgno}/{pgsize}")
+		public List<Pro_model>sortpage(@PathVariable int pgno,@PathVariable int pgsize){
+			return sser.getbypage(pgno, pgsize);
+		}
+		@GetMapping("sortandpageid/{pgno}/{pgsize}/{name}")
+		public List<Pro_model>sortpagease(@PathVariable int pgno,@PathVariable int pgsize,@PathVariable String name){
+			return sser.sortandpage(pgno, pgsize, name);
+		}
+		@GetMapping("sortandpagedes/{pgno}/{pgsize}/{name}")
+		public List<Pro_model> sortpagedesc(@PathVariable int pgno,@PathVariable int pgsize,@PathVariable String name ){
+			return sser.sortandpagedesc(pgno, pgsize, name);
+		}
+		@GetMapping("/getnew/{name}/{degination}")
+		public List<Pro_model> displayAll(@PathVariable String name,@PathVariable String degination){ //or
+			return sser.studentinfo(name, degination);
+		}
+		@GetMapping("/andget/{name}/{degination}")
+		public List<Pro_model>andget(@PathVariable String name,@PathVariable String degination){  //and
+			return sser.andStuent(name, degination);
+		}
+		@GetMapping("/start/{name}")
+		public List<Pro_model> starting(@PathVariable String name){
+			return sser.withstart(name);
+		}
+		
+		@GetMapping("/end/{name}")
+		public List<Pro_model> ending(@PathVariable String name){
+			return sser.withend(name);
+		}
+		@DeleteMapping("/delid/{age}")
+		public String deleting(@PathVariable int age){
+			return sser.deletinfo(age)+" DELETED";
+		}
+		@PutMapping("updat/{age}/{newage}")
+		public String updating(@PathVariable int age,@PathVariable int newage) {
+			return sser.updateinfo(age, newage)+" UPDATED";
+		}
+		
+		
+		
+		
 }
