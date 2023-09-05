@@ -1,0 +1,129 @@
+
+#logpic{
+    height: 850px;
+    width: 1700px;
+}
+#text{
+    text-align: center;
+    transform: translate(700px ,-600px);
+    background-color: rgb(13, 222, 83);
+    height: 250px;
+    width: 350px;
+}
+#po{
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#rlink{
+    text-align: center;
+    transform: translate(700px ,-650px);
+    color: black;
+    height: 250px;
+    width: 350px;
+   
+}
+.sign-form{
+    text-align: center;
+   transform: translate(650px,150px);
+   width:500px;
+   height:400px;
+   color:black;
+   font-weight:bold;
+   animation: myanimation 10s infinite;
+}
+  @keyframes myanimation {
+    0% {background-color: red;}
+    25%{background-color:yellow;}
+    50%{background-color:green;}
+    75%{background-color:brown;}
+    100% {background-color: red;}
+  }
+  .login-button{
+    background-color: brown;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  }
+ .book-form{
+  text-align: center;
+  transform: translate(650px,50px);
+  width:500px;
+  height:600px;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+ }
+ @keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:yellow;}
+  50%{background-color:green;}
+  75%{background-color:brown;}
+  100% {background-color: red;}
+}
+#we{
+  color: blue;
+  font-size: 40px;
+  text-align: center;
+  background-color: white;
+
+}
+#log{
+  position: absolute;
+  margin-left: 500px;
+  background-color: aquamarine;
+  display: flex;
+  
+ 
+
+}
+#as{
+  color: crimson;
+  background-color: black;
+  height: 40px;
+  flex-wrap: 80px;
+ 
+}
+#sd{
+  color:rgb(28, 26, 25);
+  height: 50px;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(224, 18, 87);
+  flex-wrap: 80px;
+}
+#pic3{
+  height: 80px;
+  transform: translate(0px,-859px);
+}
+#pic4{
+  height: 80px;
+  transform: translate(0px,0px);
+}
+#pic5{
+  transform: translate(0px,-155px);
+  height: 1500px;
+  
+}
+#io{
+  transform: translate(0px,-1500px);
+}
+#p2{
+  height: 860px;
+  width: 1680px;
+}
+#p3{
+  text-align: center;
+  transform: translate(0px,-800px);
+  background-color: white;
+  
+}
+#p1{
+  transform: translate(400px,-800px);
+  background-color: slateblue;
+  height: 500px;
+  width: 1000px;
+  color: aqua;
+}
+#pic7{
+  height: 80px;
+  transform: translate(0px,-1500px);
+}

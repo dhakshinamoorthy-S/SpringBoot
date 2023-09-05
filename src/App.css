@@ -1,0 +1,68 @@
+#head{
+  background-color: rgb(43, 212, 20);
+  color: rgb(238, 90, 10);
+  font-size:large;
+  text-align: center;
+  height: 150px;
+  padding-inline-start: 10cm;
+ 
+ 
+  font-family:Arial, Helvetica, sans-serif;
+}
+#h1{
+  transform: translate(-150px,40px);
+}
+#pic{
+  transform: translate(0px,-150px);
+
+  height: 150px;
+  width: 200px;
+}
+#pic1{
+  transform: translate(1307px,-150px);
+
+  height: 150px;
+  width: 200px;
+}
+#home{
+  transform: translate(400px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+
+  
+}
+#about{
+  transform: translate(410px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+}
+#contact{
+  transform: translate(420px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+}
+#login{
+  transform: translate(430px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+}
+#signin{
+  transform: translate(435px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+}
+#ticketbook{
+  transform: translate(450px,-170px);
+  color:black;
+  background-color: yellow;
+  border-radius: 10px;
+}
+#pic6{
+  height: 100px;
+
+}
