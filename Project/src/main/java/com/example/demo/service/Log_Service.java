@@ -12,8 +12,8 @@ import com.example.demo.repository.Log_repo;
 public class Log_Service {
 	@Autowired
 	Log_repo sr;
-	public List<Login> saveinfo(List<Login> ss){
-		return sr.saveAll(ss);
+	public Login saveinfo(Login  ss){
+		return sr.save(ss);
 	}
 	public List<Login>showinfo(){
 		return sr.findAll();
@@ -21,3 +21,4 @@ public class Log_Service {
 }
 	
 	
+

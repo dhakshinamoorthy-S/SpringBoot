@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +20,12 @@ import com.example.demo.model.Pro_model;
 import com.example.demo.service.Pro_Service;
 
 @RestController
+@CrossOrigin
 public class Controller {
 	@Autowired
 		Pro_Service sser;  //json to java object
 		@PostMapping("/post")
-		public List<Pro_model> add(@RequestBody  List<Pro_model> ss) {
+		public Pro_model add(@RequestBody Pro_model ss) {
 			return sser.saveinfo(ss);
 		}
 		@GetMapping("showdetails")
@@ -35,7 +37,7 @@ public class Controller {
 			return sser.showbyid(mobileno);
 		}
 		@PutMapping("/put")
-		public Pro_model modify(Pro_model ss) {
+		public Pro_model modify(@RequestBody Pro_model ss) {
 			return sser.changeinfo(ss);
 		}
 		@PutMapping("putbyid/{mobileno}")
@@ -44,7 +46,7 @@ public class Controller {
 		}
 		@DeleteMapping("deletebyid/{mobileno}")
 		public void deletebyid(@PathVariable Long mobileno) {
-			sser.deleteid(mobileno);
+			sser.detelteid(mobileno);
 		}
 		@DeleteMapping("deleteparm")
 		public void deleteparm(@RequestParam Long mobileno) {

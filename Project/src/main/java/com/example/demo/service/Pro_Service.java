@@ -18,8 +18,8 @@ import com.example.demo.repository.Pro_Repo;
 public class Pro_Service {
 	@Autowired
 		Pro_Repo sr;
-		public List<Pro_model> saveinfo(List<Pro_model> ss){
-			return sr.saveAll(ss);
+		public Pro_model saveinfo(Pro_model ss){
+			return sr.save(ss);
 		}
 		public List<Pro_model>showinfo(){
 			return sr.findAll();
@@ -40,12 +40,18 @@ public class Pro_Service {
 				return "PLEASE CORRECT YOUR MOBILE NUMBER";
 			}
 		}
-		public void deleteid(Long mobileno) {
+//		public void deleteid(Long mobileno) {
+//			sr.deleteById(mobileno);
+//		}
+//		
+//		
+		public void detelteid(Long mobileno) {
 			sr.deleteById(mobileno);
 		}
 		public void deleteparm(Long mobileno) {
 			sr.deleteById(mobileno);
 		}
+		
 		public List<Pro_model>sortinfo(String name){
 			return sr.findAll(Sort.by(Sort.DEFAULT_DIRECTION,name));
 		}
